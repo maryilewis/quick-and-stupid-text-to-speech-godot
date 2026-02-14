@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dinn1txpilmoq"]
+
+[ext_resource type="Script" uid="uid://uu6teddarwtr" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Control" type="Control" unique_id=1898882533]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ig7tw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1361285661]
+unique_name_in_owner = true
+pitch_scale = 3.2
+bus = &"Speech"
+playback_type = 1
+
+[node name="CharacterTimer" type="Timer" parent="." unique_id=204696805]
+unique_name_in_owner = true
+wait_time = 0.055
+
+[node name="PauseTimer" type="Timer" parent="." unique_id=803900115]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=32460159]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer" unique_id=516776099]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Welcome to town, Captain!
+
+The quick fox jumped over the lazy dog."
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2099095815]
+layout_mode = 2
+text = "play it"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
