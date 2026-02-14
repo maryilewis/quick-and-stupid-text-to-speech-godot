@@ -2,7 +2,7 @@
 
 Made with Godot 4.6.
 
-Demo: TODO add link to demo
+Demo here: https://applebard.itch.io/quick-and-stupid-text-to-speech-demo
 
 This is a very simple example of how to add Animal Crossing-like speech to a Godot project.
 
